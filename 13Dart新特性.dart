@@ -1,5 +1,7 @@
 void main(List<String> args) {
   testNull();
+
+  printUserInfo("jason", age: 12, sex: "男");
 }
 
 /**
@@ -44,5 +46,17 @@ void printStringLength(String? str) {
  */
 
 class Person {
-  late String name;
+  String? name;
+  int age;
+  //name为可选类型参数，age为必传参数
+  Person({this.name, required this.age});
+}
+
+/**
+ * Dart required 内置修饰符
+ * 主要用于允许根据需要标记任何命名参数，使得他们不为空，因为可选参数中必须有个required,必须传入
+ */
+
+String? printUserInfo(String name, {required int age, required String sex}) {
+  return null;
 }
