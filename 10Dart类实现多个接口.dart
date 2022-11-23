@@ -10,12 +10,12 @@ void main(List<String> args) {
  */
 
 abstract class A {
-  String clsName;
+  late String clsName;
   printAinfo();
 }
 
 abstract class B {
-  int age;
+  late int age;
   printBinfo();
 }
 

@@ -24,7 +24,7 @@ void main(List<String> args) {
 
 //抽象类定义
 abstract class Animal {
-  String animalName;
+  String? animalName;
   eat(); //抽象方法
   run(); //抽象方法
 
@@ -37,7 +37,7 @@ abstract class Animal {
 // 继承
 class Dog extends Animal {
   @override
-  String get animalName => super.animalName;
+  String? get animalName => super.animalName;
 
   @override
   eat() {
@@ -80,7 +80,7 @@ void polymorphism() {
 
 // 定义接口
 abstract class DB {
-  String path;
+  late String path;
   add();
   delete();
   save();
@@ -97,7 +97,7 @@ class MySql implements DB {
   save() {}
 
   @override
-  String path;
+  late String path;
 }
 
 class MogoDB implements DB {
@@ -111,5 +111,5 @@ class MogoDB implements DB {
   save() {}
 
   @override
-  String path;
+  late String path;
 }

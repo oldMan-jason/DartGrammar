@@ -60,7 +60,7 @@ void method3() {
  *  Dart 函数的可选参数
  * [int 参数名，String 参数名]
  */
-void optionsMethod(String name, [int age, double money]) {
+void optionsMethod(String name, [int? age, double? money]) {
   if (age != null && money != null) {
     print("名字是$name 年龄$age 收入$money");
   } else {
@@ -71,7 +71,7 @@ void optionsMethod(String name, [int age, double money]) {
 /**
  * Dart 函数 可选参数的默认值
  */
-void optionsDefaultValMethod(String name, [String sex = "男", int age]) {
+void optionsDefaultValMethod(String name, [String sex = "男", int? age]) {
   if (age != null) {
     print("名字$name,性别：$sex 年龄$age");
   } else {
@@ -82,7 +82,7 @@ void optionsDefaultValMethod(String name, [String sex = "男", int age]) {
 /**
  *  Dart 函数 命名参数
  */
-void nameMethod(String name, {int age, String sex = "男"}) {
+void nameMethod(String name, {int? age, String sex = "男"}) {
   print("名字$name,年龄$age,性别$sex");
 }
 
