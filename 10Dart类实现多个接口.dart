@@ -81,3 +81,12 @@ void mixinsMethod() {
   Son1 s1 = Son1("jason", 12);
   s1.printMotherInfo();
 }
+
+mixin TestClass {
+  int age = 0;
+}
+
+class TestMixinsClass with TestClass {
+  @override
+  int get age => 10;
+}

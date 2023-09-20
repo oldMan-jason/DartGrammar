@@ -1,3 +1,5 @@
+import 'dart:html';
+
 void main(List<String> args) {
   Person p = Person();
   p.printInfo();
@@ -155,5 +157,35 @@ class Person3 {
 
     //调用静态方法
     printInfo();
+
+    Manager.instance;
+  }
+}
+
+// 单例类
+class SingleManager {
+  //私有构造函数
+  SingleManager._instance();
+  // 定义静态变量
+  static final SingleManager _manager = SingleManager._instance();
+  // 工厂方法
+  factory SingleManager() {
+    return _manager;
+  }
+}
+
+class Manager {
+  // 工厂模式
+  factory Manager() => _getInstance();
+  static Manager get instance => _getInstance();
+  static Manager? _instance;
+  Manager._() {
+    // 初始化
+  }
+  static Manager _getInstance() {
+    if (_instance == null) {
+      _instance = Manager._();
+    }
+    return _instance!;
   }
 }

@@ -46,10 +46,12 @@ void printStringLength(String? str) {
  */
 
 class Person {
-  String? name;
+  late String name;
   int age;
   //name为可选类型参数，age为必传参数
-  Person({this.name, required this.age});
+  Person({required this.age}) {
+    name = "jason";
+  }
 }
 
 /**
@@ -60,3 +62,17 @@ class Person {
 String? printUserInfo(String name, {required int age, required String sex}) {
   return null;
 }
+
+/***
+ *  空安全适配
+ * 1. 可空的属性：通过 ? 进行修饰
+ * 2. 不可空的属性，在构造函数中设置默认值或通过required进行修饰
+ */
+
+/**
+ * State的空安全适配
+ * 1. 可空的变量：通过？进行修饰
+ * 2. 不可空的变量：可采用1. 定义时，初始化值；2、使用late
+ */
+
+
