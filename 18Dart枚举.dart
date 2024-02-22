@@ -14,3 +14,9 @@ enum PortType {
   final bool? isUsb;
   const PortType(this.name, [this.isUsb = false]);
 }
+
+enum TestEnum {
+  test1(1);
+  final int age;
+  const TestEnum(this.age);
+}
